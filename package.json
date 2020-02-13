@@ -10,6 +10,7 @@
     "build:clean": "rimraf ./build",
     "dev": "cross-env NODE_ENV=development node server",
     "start": "cross-env NODE_ENV=production node server",
+    "start:production": "npm run test && npm run build && npm run start",
     "lint": "npm run lint:eslint -- . ",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage"

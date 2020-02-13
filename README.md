@@ -23,9 +23,18 @@ yarn build
 yarn start
 ```
 
-- For run test:
+- Quick start prod:
 ```bash
-npm test
+npm install
+npm run start:production
+# or
+yarn
+yarn start:production
+```
+
+- For test:
+```bash
+npm run test
 # or
 yarn test
 ```
