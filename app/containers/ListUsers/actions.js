@@ -7,7 +7,6 @@ export function listUsers() {
 }
 
 export function listUsersLoaded(listUsers) {
-  console.log('ahihu'. listUsers)
   return {
     type: LIST_USER_TYPE.LOAD_USERS_SUCCESS,
     listUsers
