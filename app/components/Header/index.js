@@ -9,7 +9,7 @@ import messages from './messages';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 8px 30px;
+  padding: 8px 30px;
 `
 
 const Menu = styled.div`
