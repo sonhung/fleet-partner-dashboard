@@ -17,7 +17,7 @@ const RequestRealtimeBlock = () => {
   })
 
   return (<div>
-    <div>Data: {data}</div>
+    <div>Data real time: {data}</div>
   </div>)
 }
 

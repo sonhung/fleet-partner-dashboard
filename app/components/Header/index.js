@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { FormattedMessage } from 'react-intl';
-import LocaleToggle from 'containers/LocaleToggle';
+import LocaleToggle from 'containers/LanguageProvider/Locale';
 import messages from './messages';
 
 const Container = styled.div`
