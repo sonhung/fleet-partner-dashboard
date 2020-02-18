@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import RequestRightBlock from '../../containers/RigthRequest';
 
 const LayoutContainer = styled.div`
   margin: 0;
@@ -21,6 +22,15 @@ const FooterContainer = styled.div`
   height: 60px;
 `
 
+const RequestContainer = styled.div`
+  position: fixed;
+  top: 50px;
+  right: 0;
+  border-left: 1px solid #cdcdcd;
+  width: 150px;
+  min-height: calc(100vh - 50px - 60px);
+`
+
 const Layout = props => {
   return (
     <LayoutContainer >
@@ -31,6 +41,9 @@ const Layout = props => {
       <FooterContainer>
         <Footer />
       </FooterContainer>
+      <RequestContainer>
+        <RequestRightBlock />
+      </RequestContainer>
     </LayoutContainer>
   )
 }
