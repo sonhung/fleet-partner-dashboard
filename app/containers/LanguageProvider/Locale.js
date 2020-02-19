@@ -9,15 +9,18 @@ import { makeSelectLocale } from './selectors';
 export function LocaleToggle(props) {
   return (
     <div>
-      <button onClick={() =>props.onChangeLocale('vi')}>vi</button>
-      <button onClick={() =>props.onChangeLocale('en')}>en</button>
+      <button type="button" onClick={() => props.onChangeLocale('vi')}>
+        vi
+      </button>
+      <button type="button" onClick={() => props.onChangeLocale('en')}>
+        en
+      </button>
     </div>
   );
 }
 
 LocaleToggle.propTypes = {
-  onLocaleToggle: PropTypes.func,
-  locale: PropTypes.string,
+  onChangeLocale: PropTypes.func,
 };
 
 const mapStateToProps = createSelector(

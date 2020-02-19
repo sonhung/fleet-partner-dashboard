@@ -10,13 +10,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 8px 30px;
-`
+`;
 
 const Menu = styled.div`
   a {
     margin: 0 10px;
   }
-`
+`;
 
 function Header() {
   return (

@@ -3,7 +3,7 @@ import produce from 'immer';
 import { LIST_USER_TYPE } from './constants';
 
 export const initialState = {
-  listUsers: []
+  listUsers: [],
 };
 
 /* eslint-disable default-case, no-param-reassign */

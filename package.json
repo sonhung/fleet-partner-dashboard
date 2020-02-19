@@ -8,9 +8,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
-    "dev": "cross-env NODE_ENV=development node server",
+    "dev": "npm run lint && cross-env NODE_ENV=development node server",
     "start": "cross-env NODE_ENV=production node server",
     "start:production": "npm run test && npm run build && npm run start",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint": "npm run lint:eslint -- . ",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage"
@@ -38,6 +39,7 @@
     "express": "4.16.4",
     "firebase": "^7.8.2",
     "fontfaceobserver": "2.1.0",
+    "google-map-react": "^1.1.6",
     "history": "4.9.0",
     "hoist-non-react-statics": "3.3.0",
     "immer": "3.0.0",

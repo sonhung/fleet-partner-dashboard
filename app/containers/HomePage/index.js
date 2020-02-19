@@ -1,17 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
 
-const HomePage = () => {
+const HomePage = props => {
+  const { title = 'home page' } = props;
+
   return (
     <article>
       <Helmet>
         <title>Home Page</title>
       </Helmet>
-      <div>
-        home page
-      </div>
+      <div>{title}</div>
     </article>
   );
-}
+};
+
+HomePage.propTypes = {
+  title: PropTypes.string,
+};
 
 export default HomePage;

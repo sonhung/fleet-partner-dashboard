@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import PrivateRoute from './PrivateRouter';
 import HomePage from 'containers/HomePage';
 import Listuser from 'containers/ListUsers';
 import LoginPage from 'containers/Login';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import PrivateRoute from './PrivateRouter';
 
 import GlobalStyle from '../../global-styles';
 

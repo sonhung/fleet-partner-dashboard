@@ -1,26 +1,24 @@
+/*eslint-disable */
 import React, { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
+import { isEmpty } from 'lodash';
 
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
+import sagas from 'sagas';
 import listUsersReducer from './reducer';
 import { listUsers } from './actions';
-import sagas from 'sagas';
-import { isEmpty } from 'lodash';
-import { makeSelectUser} from './selectors';
+import { makeSelectUser } from './selectors';
 
 const key = 'listusers';
 
-export const ListUsersContext = React.createContext("");
+export const ListUsersContext = React.createContext('');
 
-export function ListUsers({
-  listUsers = [],
-  onLoadUser
-}) {
+const ListUsers = ({ listUsers = [], onLoadUser }) => {
   useInjectReducer({ key, reducer: listUsersReducer });
   useInjectSaga({ key, saga: sagas });
   useEffect(() => {
@@ -32,7 +30,9 @@ export function ListUsers({
       <Helmet>
         <title>List Users</title>
       </Helmet>
-  <div>{listUsers.map((item, i) => <div key={i}>{item.id}</div>)}</div>
+      <div>
+        {listUsers.map((item, i) => <div key={i}>{item.id}</div>)}
+      </div>
     </article>
   );
 }

@@ -12,15 +12,16 @@ const LayoutContainer = styled.div`
 
 const HeaderContainer = styled.div`
   height: 50px;
-`
+`;
 
 const MainContent = styled.div`
   min-height: calc(100vh - 50px - 60px);
-`
+  width: calc(100vw - 150px);
+`;
 
 const FooterContainer = styled.div`
   height: 60px;
-`
+`;
 
 const RequestContainer = styled.div`
   position: fixed;
@@ -29,27 +30,25 @@ const RequestContainer = styled.div`
   border-left: 1px solid #cdcdcd;
   width: 150px;
   min-height: calc(100vh - 50px - 60px);
-`
+`;
 
-const Layout = props => {
-  return (
-    <LayoutContainer >
-      <HeaderContainer >
-        <Header />
-      </HeaderContainer>
-      <MainContent>{props.children}</MainContent>
-      <FooterContainer>
-        <Footer />
-      </FooterContainer>
-      <RequestContainer>
-        <RequestRightBlock />
-      </RequestContainer>
-    </LayoutContainer>
-  )
-}
+const Layout = props => (
+  <LayoutContainer>
+    <HeaderContainer>
+      <Header />
+    </HeaderContainer>
+    <MainContent>{props.children}</MainContent>
+    <FooterContainer>
+      <Footer />
+    </FooterContainer>
+    <RequestContainer>
+      <RequestRightBlock />
+    </RequestContainer>
+  </LayoutContainer>
+);
 
 Layout.propTypes = {
   children: PropTypes.node,
-}
+};
 
 export default Layout;
